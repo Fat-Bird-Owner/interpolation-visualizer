@@ -1,0 +1,32 @@
+body {
+background: #15151d;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 85vh;
+flex-wrap: nowrap;
+}
+
+canvas {
+background: #27272f;
+}
+
+textarea {
+width: 200px;
+height: 535px;
+border-radius: 0;
+background: #27272f;
+border: none;
+color: #ffffff;
+}
+
+button {
+width: 212px;
+height: 54.5px;
+border-radius: 0;
+background-color: #27272f;
+outline: none;
+border: none;
+color: #69696f;
+}
+
