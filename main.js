@@ -172,6 +172,8 @@ function interp(t, type) {
 let canvas = document.getElementById("canvas");
 let button = document.getElementById("reinit");
 let input = document.getElementById("interp");
+let select = document.getElementById("interpSelect")
+
 let ctx = canvas.getContext("2d");
 
 function drawGrid(ctx, x, y, x2, y2, cols, rows) {
@@ -234,12 +236,13 @@ drawGrid(ctx, 10, 10, 590, 590, 4, 4)
 drawInterp(ctx, 10, 10, 580, 580, interpStyle);
 
 let x = 570 * (time/limit) + 10
-let y = (-580 * prog(limit)) + 590
+let y = -580 * prog(limit) + 590
   
 ctx.beginPath();
 
 ctx.strokeStyle = "#79797f";
-ctx.arc(x+5, y, 10, 0, Math.PI * 2);
+ctx.fillStyle = "#79797f"
+ctx.arc(x, y, 10, 0, Math.PI * 2);
 
 ctx.fill();
 ctx.stroke();
@@ -250,11 +253,11 @@ requestAnimationFrame(render);
 
 button.addEventListener("click", () => {
 
-let value = Hjson.parse(input.value);
+let value = Number(input.value);
 console.log(value);
 
-interpStyle = value.interp;
-limit = value.timeScale == null ? limit : value.timeScale
+interpStyle = interpSelect.value
+limit = value == 0 ? limit : value
 
 time = 0;
 

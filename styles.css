@@ -1,8 +1,14 @@
 body {
 background: #15151d;
 display: flex;
-justify-content: center;
+flex-direction: column;
+}
+
+#container {
+background: #15151d;
+display: flex;
 align-items: center;
+justify-content: center;
 min-height: 85vh;
 flex-wrap: nowrap;
 }
@@ -11,13 +17,36 @@ canvas {
 background: #27272f;
 }
 
+h2 {
+font-family: Arial, sans-serif;
+color: #ffffff;
+align-self: center;
+}
+
+h4 {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  align-self: center;
+}
+
 textarea {
 width: 200px;
-height: 535px;
+height: 54.5px;
 border-radius: 0;
 background: #27272f;
 border: none;
 color: #ffffff;
+}
+
+select {
+  width: 212px;
+  height: 54.5px;
+  border-radius: 0;
+  background: #27272f;
+  border: none;
+  margin-bottom: 0px;
+  margin: 0px;
+  color: #ffffff;
 }
 
 button {
@@ -30,3 +59,24 @@ border: none;
 color: #69696f;
 }
 
+label {
+color: #ffffff;
+align-self: flex-start;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+border: none;
+border-top: 3px solid #ffffff;
+}
+
+#container #config {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+
+}
